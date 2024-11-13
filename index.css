@@ -1,5 +1,8 @@
 
-
+body{
+      background-color: black;
+      position: relative;
+}
 
 header{
       height: 65%;
@@ -19,9 +22,7 @@ h1{
 
 header .container-buttons{
       display: flex;
-      
-      
-      width: 100%;
+      width: 80%;
       align-items: center;
       
 }
@@ -30,17 +31,19 @@ button{
 }
 
 main{
-     height:100%;
+     height:600px;
       width: 100%;
       border:2px solid black;
-      
       display: flex;
       justify-content: space-around;
       align-items: center;
 }
-.canvas-meme{
+.container-meme{
+      height: 600px;
       width: 90%;
+      max-width: 600px;
 }
+
 p{
       margin: 0;
       height: 50px;
@@ -55,7 +58,7 @@ p{
       font-size: 1rem;
 }
 img{
-      height: 249px;
+      height: 500px;
       width: 100%;
       background-color: black;
 }
@@ -65,17 +68,45 @@ button{
       color: white;
       border-bottom: black;
 }
-footer .conteiner-descargar{
+.conteiner-descargar{
       height: 100px;
       display: flex;
-      width: 90%;
+     width: 90%;
       align-items: center;
       justify-content: center;
-
-
 }
 .button-descargar{
       height: 50px;
       width: 50%;
       background-color:#2e7d32 ;
+      align-items: center;
+}
+aside {
+      width:15%;
+      background-color: black;
+      position: absolute;
+      top: 0;
+      right: 0;
+      
+}
+aside .titulo-aside{
+      background-color: black;
+      color: white;
+}
+aside .titulo-aside2{
+   background-color: black;
+   color: white;   
+   justify-content: start; 
+
+
+}
+aside .contenedor-fondo{
+      display: flex;
+}
+aside .contenedor-filtros{
+      color: white;
+}
+aside .contenedor-filtros .titulos-filtro{
+      display: flex;
+      flex-direction: column;
 }
