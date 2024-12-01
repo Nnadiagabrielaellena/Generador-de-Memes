@@ -1,10 +1,9 @@
-
-body{
+body {
       background-color: black;
       position: relative;
 }
 
-header{
+header {
       height: 65%;
       width: 100%;
       background-color: black;
@@ -15,98 +14,146 @@ header{
       align-items: center;
       flex-wrap: wrap;
 }
-h1{
+
+h1 {
       width: 100%;
-      
+
 }
 
-header .container-buttons{
+header .container-buttons {
       display: flex;
-      width: 80%;
+      width: 30%;
       align-items: center;
-      
-}
-button{
-      justify-content: space-around;
+      justify-content: center;
+
 }
 
-main{
-     height:600px;
+
+.container-buttons  .button-tit{
+      justify-content: center;
+      margin-bottom: 1rem;
+      border: black;
+
+}
+
+main {
+      height: 600px;
       width: 100%;
-      border:2px solid black;
+      border: 2px solid black;
       display: flex;
       justify-content: space-around;
       align-items: center;
 }
-.container-meme{
+
+body main .container-meme {
       height: 600px;
       width: 90%;
       max-width: 600px;
 }
 
-p{
+p {
       margin: 0;
       height: 50px;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color:white;
+      background-color: white;
       color: black;
       border: 2px solid black;
       font-family: Anton;
       font-size: 1rem;
 }
-img{
-      height: 500px;
+
+#imgMeme {
+      height: 400px;
       width: 100%;
-      background-color: black;
+      
 }
-button{
+
+button {
+
       width: 100%;
       background-color: black;
       color: white;
       border-bottom: black;
 }
-.conteiner-descargar{
+
+.conteiner-descargar {
       height: 100px;
+      
       display: flex;
-     width: 90%;
-      align-items: center;
+      
       justify-content: center;
+    
+      align-items: center;
+      
 }
-.button-descargar{
+
+.button-descargar {
       height: 50px;
-      width: 50%;
-      background-color:#2e7d32 ;
+      width: 30%;
+      background-color: #2e7d32;
       align-items: center;
 }
-aside {
-      width:15%;
+
+body aside .asideImagen {
+      width: 15%;
       background-color: black;
       position: absolute;
       top: 0;
       right: 0;
-      
+      display: none;
+
+
 }
-aside .titulo-aside{
+
+aside .titulo-imagen {
       background-color: black;
       color: white;
-}
-aside .titulo-aside2{
-   background-color: black;
-   color: white;   
-   justify-content: start; 
-
 
 }
-aside .contenedor-fondo{
+
+ .titulo-aside {
+      background-color: black;
+      color: white;
+      justify-content: start;
       display: flex;
+      height: 10px;
+      margin: 1rem;
+      
+      }
+
+     
+
+aside .contenedor-fondo {
+      display: flex;
+      ;
+      
 }
-aside .contenedor-filtros{
+
+
+
+aside .contenedor-filtros {
       color: white;
 }
-aside .contenedor-filtros .titulos-filtro{
+
+aside .contenedor-filtros .titulos-filtro {
       display: flex;
       flex-direction: column;
+}
+
+aside .asideTexto {
+      width: 15%;
+color: azure;
+      top: 0;
+      right: 0;
+      color: azure;
+      display: flex;
+      flex-direction: column;
+      
+
+}
+i{
+      color: azure;
 }

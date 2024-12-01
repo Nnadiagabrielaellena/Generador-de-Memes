@@ -11,93 +11,150 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
             rel="stylesheet">
+            <script src="https://kit.fontawesome.com/7505fbf04c.js" crossorigin="anonymous"></script>    
 </head>
 
 <body>
+
       <header>
             <div class="title-header">
                   <h1>Generador de Memes</h1>
             </div>
             <div class=container-buttons>
-                  <button>imagen</button>
-                  <button>texto</button>
-                  <button>modo oscuro</button>
+                  <button class="button-tit">imagen</button>
+                  <button class="button-tit">texto</button>
+                  <button class="button-tit">modo oscuro</button>
             </div>
 
       </header>
-
       <main>
             <div class="container-meme">
                   <div class="canvas-meme">
-                        <p>TOP TEXT</p>
-                        <img src="" alt="">
-                        <p>BOTTOM TEXT</p>
+                        <p id="topText">TOP TEXT</p>
+                        <div id="imgMeme">
+                        </div>
+                        <p id="topText">Bottom TEXT</p>
                   </div>
 
 
 
-                  <div class="conteiner-descargar">
-                        <button class="button-descargar">descargar meme</button>
-                  </div>
+
+
             </div>
       </main>
 
       <aside>
+            <div class="asideImagen">
+                  <p class="titulo-imagen">imagen</p>
 
-            <p class="titulo-aside">imagen</p>
+                  <label class="titulo-aside">URL</label>
+                  <input id="url" type="text">
 
-            <p class="titulo-aside2">URL</p>
 
-            <P class="titulo-aside2">FONDO</P>
-            <div class="contenedor-fondo">
-                  <p class="titulo-aside2">fffff</p>
-                  <p class="titulo-aside2">ninguno</p>
+                  <label class="titulo-aside">FONDO</label>
+                  <div class="contenedor-fondo">
+                        <input id="fondo" type="text">fffff</input>
+                        <input id="aclarar" type="text">ninguno</input>
+                  </div>
+                  <div class="contenedor-filtros">
+                        <label class="titulo-aside">FILTROS</label>
+                        <div class="titulos-filtro">
+                              <label for="brillo">brillo</label>
+                              <input id="brillo" type="range" min="0" max="1" step="0.1">
+                        </div>
+
+                        <div class="titulos-filtro">
+                              <label for="">contraste</label>
+                              <input id="contraste" type="range">
+                        </div>
+                        <div class="titulos-filtro">
+                              <label for="desenfoque">desenfoque</label>
+                              <input type="range">
+                        </div>
+                        <div class="titulos-filtro">
+                              <label for="">escala de grises</label>
+                              <input type="range">
+                        </div>
+                        <div class="titulos-filtro">
+                              <label for="">sepia</label>
+                              <input type="range">
+                        </div>
+                        <div class="titulos-filtro">
+                              <label for="">hue</label>
+                              <input type="range">
+                        </div>
+                        <div class="titulos-filtro">
+                              <label for="">saturado</label>
+                              <input type="range">
+                        </div>
+
+
+
+                        <div class="titulos-filtro">
+                              <label for="">negativo</label>
+                              <input type="range">
+
+                        </div>
+                        <button>restablecer filtros</button>
+
+
+                  </div>
             </div>
-            <div class="contenedor-filtros">
-                  <p class="titulo-aside2">FILTROS</p>
-                  <div class="titulos-filtro">
-                        <label for="brillo">brillo</label>
-                        <input type="range">
+            <div class="asideTexto">
+                  <h2>TEXTO</h2>
+                  <label for="ddddd">SUPERIOR</label>
+                  <input placeholder="TOP TEXT" type="text">
+                  <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Sin texto Superior</label>
                   </div>
-
-                  <div class="titulos-filtro">
-                        <label for="">contraste</label>
-                        <input type="range">
+                  <h2>INFERIOR</h2>
+                  <label for="ddddd">BOTTOM TEXT</label>
+                  <input placeholder="TOP TEXT" type="text">
+                  <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Sin texto Inferior</label>
                   </div>
-                  <div class="titulos-filtro">
-                        <label for="desenfoque">desenfoque</label>
-                        <input type="range">
-                  </div>
-                  <div class="titulos-filtro">
-                        <label for="">escala de grises</label>
-                        <input type="range">
-                  </div>
-                  <div class="titulos-filtro">
-                        <label for="">sepia</label>
-                        <input type="range">
-                  </div>
-                  <div class="titulos-filtro">
-                        <label for="">hue</label>
-                        <input type="range">
-                  </div>
-                  <div class="titulos-filtro">
-                        <label for="">saturado</label>
-                        <input type="range">
-                  </div>
-
-
-
-                  <div class="titulos-filtro">
-                        <label for="">negativo</label>
-                        <input type="range">
+                  <label for="">FUENTE</label>
+                  <select name="" id="">
+                        <option value="">Arial</option>
+                        <option value="">Arial Black</option>
+                        <option value="">American Typewriter</option>
+                        <option value="">Andale Mono</option>
+                        <option value="">Comics Sans MS</option>
+                        <option value="">Helvetica</option>
+                        <option value="">Impact</option>
+                        <option value="">Verdana</option>
+                        <option value="">Times New Roman</option>
+                  </select>
+                  <div>
+                        <input type="number">
+                        <i class="fa-solid fa-align-left"></i>
+                        <i class="fa-sharp fa-solid fa-align-center"></i>
+                        <i class="fa-sharp fa-solid fa-align-right"></i>
 
                   </div>
-                  <button>restablecer filtros</button>
+                  <div >
+                        <label for="COLOR">COLOR</label>
+                        <input type="color" name="" id="">
+                        <label for="">FONDO</label>
+                        <input placeholder="#FFFFFF" PLKA type="color" name="" id="">
+                  </div>
 
+
+
+
+
+            </div>
 
       </aside>
+      <footer class="conteiner-descargar">
 
+            <button class="button-descargar">descargar meme</button>
 
+      </footer>
+
+      <script src="./index.js"></script>
 </body>
 
 </html>
