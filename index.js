@@ -28,5 +28,22 @@ const $contraste= $("#contraste");
 $contraste.addEventListener("input",()=>{
       $url.style.filter=`constrast(${$conntraste.value})`
 })
+ //------aside -texto superior---------//
+ const $topText =$("#top-tex");
+ const $topTextMain =$("#topTextMain");
+
+ $topText.addEventListener("input",(e)=>{
+      $topTextMain.innerText = e.target.value
+
+ })
+ //---------aside.texto.infeior------------//
+ const $textoInferior = $("#textoInferior");
+ const $textoInferiorMain =$("#topText");
+
+ $textoInferior.addEventListener("input",(e)=>{
+      $textoInferiorMain.innerText = e.target.value
+ })
+
  
+
 

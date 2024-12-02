@@ -11,7 +11,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
             rel="stylesheet">
-            <script src="https://kit.fontawesome.com/7505fbf04c.js" crossorigin="anonymous"></script>    
+      <script src="https://kit.fontawesome.com/7505fbf04c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,10 +27,11 @@
             </div>
 
       </header>
+     
       <main>
             <div class="container-meme">
                   <div class="canvas-meme">
-                        <p id="topText">TOP TEXT</p>
+                        <p id="topTextMain">TOP TEXT</p>
                         <div id="imgMeme">
                         </div>
                         <p id="topText">Bottom TEXT</p>
@@ -45,19 +46,27 @@
 
       <aside>
             <div class="asideImagen">
-                  <p class="titulo-imagen">imagen</p>
+                  <h2 class="titulo-imagen">IMAGEN</h2>
+                  <div>
+                        <label class="titulo-aside-imagen">URL</label>
+                        <input id="url" type="text">
+                  </div>
 
-                  <label class="titulo-aside">URL</label>
-                  <input id="url" type="text">
 
-
-                  <label class="titulo-aside">FONDO</label>
+                  <label class="titulo-aside-imagen">FONDO</label>
                   <div class="contenedor-fondo">
-                        <input id="fondo" type="text">fffff</input>
-                        <input id="aclarar" type="text">ninguno</input>
+                        <input placeholder="#FFFFFF" id="fondo" type="text">fffff</input>
+                        <select name="" id="">
+                              <option value="">Ninguno</option>
+                              <option value="">Aclarar</option>
+                              <option value="">Oscurecer</option>
+                              <option value="">Diferencia</option>
+                              <option value="">Luminosidad</option>
+                              <option value="">Multiplicar</option>
+                        </select>
                   </div>
                   <div class="contenedor-filtros">
-                        <label class="titulo-aside">FILTROS</label>
+                        <h3 class="titulo-aside">FILTROS</h3>
                         <div class="titulos-filtro">
                               <label for="brillo">brillo</label>
                               <input id="brillo" type="range" min="0" max="1" step="0.1">
@@ -88,29 +97,30 @@
                               <input type="range">
                         </div>
 
-
-
                         <div class="titulos-filtro">
                               <label for="">negativo</label>
                               <input type="range">
 
                         </div>
-                        <button>restablecer filtros</button>
+                        <div class="contenedor-restablecer">
+                              <button>restablecer filtros</button>
+                        </div>
 
 
                   </div>
+
             </div>
             <div class="asideTexto">
                   <h2>TEXTO</h2>
                   <label for="ddddd">SUPERIOR</label>
-                  <input placeholder="TOP TEXT" type="text">
+                  <input id ="top-tex"placeholder="TOP TEXT" type="text">
                   <div>
                         <input type="checkbox" name="" id="">
                         <label for="">Sin texto Superior</label>
                   </div>
-                  <h2>INFERIOR</h2>
-                  <label for="ddddd">BOTTOM TEXT</label>
-                  <input placeholder="TOP TEXT" type="text">
+
+                  <label for="ddddd">INFERIOR</label>
+                  <input id="textoInferior" placeholder="BOTTON TEXT" type="text">
                   <div>
                         <input type="checkbox" name="" id="">
                         <label for="">Sin texto Inferior</label>
@@ -134,12 +144,40 @@
                         <i class="fa-sharp fa-solid fa-align-right"></i>
 
                   </div>
-                  <div >
+                  <div class="cont-input-Color">
+
                         <label for="COLOR">COLOR</label>
-                        <input type="color" name="" id="">
+                        <input placeholder="#000000" type="text" name="" id="">
+
                         <label for="">FONDO</label>
-                        <input placeholder="#FFFFFF" PLKA type="color" name="" id="">
+                        <input placeholder="#FFFFFF" PLKA type="text" name="" id="">
+
                   </div>
+                  <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Fondo Transparente</label>
+                  </div>
+
+                  <label for="CONTORNO">CONTORNO</label>
+                  <div class="cont-input-contorno">
+                        <button>Ninguno</button>
+                        <button>Claro</button>
+                        <button>Oscuro</button>
+                  </div>
+
+                  <label for="">ESPACIADO</label>
+                  <input type="number">
+                  <label for="">INTERLINEADO</label>
+                  <select name="" id="">
+                        <option value="">0.8</option>
+                        <option value="">1</option>
+                        <option value="">1.2</option>
+                        <option value="">1.5</option>
+                        <option value="">2</option>
+                        <option value="">2.5</option>
+                  </select>
+
+
 
 
 
