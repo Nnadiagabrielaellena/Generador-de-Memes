@@ -60,18 +60,106 @@ $sinTextoInferior.addEventListener("change", () => {
       };
 })
 /*-----FUENTE--------*/
-const $arial = $("#arial");
+const $seleccionFuente = $("#seleccionFuente");
+const $textSuperiorInferior = [$topTextMain,$textoInferiorMain];
 
-$arial.addEventListener("change", () => {
-      $textoInferiorMain.style.color = "blue";
+const $arial = $("#arial")
+const $arialBlack = $("#arialBlack");
+const $AmericanTypewriter = $("#AmericanTypewriter")
+
+$seleccionFuente.addEventListener("change", function () {
+      const $seleccionFuenteValue = $seleccionFuente.value ;
+
+      switch ($seleccionFuenteValue) {
+            case "$arial":
+                  $topTextMain.style.fontFamily = "Arial";
+                  break;
+
+            case "$arialBlack.value":
+                  
+            applyFontFamily("Arial Black, sans-serif");
+                  break;
+
+            
+
+            
+      }
 })
+//$topTextMain.style.color ="red"
+
 /*-------TAMANO-----------*/
 const $tamano = $("#tamano");
 
-$tamano.addEventListener("click",()=>{
+$tamano.addEventListener("click", () => {
       $topTextMain.style.fontSize = `${$tamano.value}px`;
-     // $topTextMain.style.color = "red";
+      $textoInferiorMain.style.fontSize = `${$tamano.value}px`;
+      // $topTextMain.style.color = "red";
 })
+
+/*----------ALINEACION-----------*/
+const $alineacionIzq = $("#alineacionIzq");
+const $alineacionCentral =$("#alineacionCentral");
+const $alineacionDerecha =$("#alineacionDerecha")
+const $textoSuperiorInferior = [$topTextMain, $textoInferiorMain]
+
+$alineacionIzq.addEventListener("click",()=>{
+      $topTextMain.style.justifyContent= "start";
+      $textoInferiorMain.style.justifyContent= "start";
+})
+$alineacionCentral.addEventListener("click",()=>{
+      $topTextMain.style.justifyContent= "center";
+      $textoInferiorMain.style.justifyContent= "center";
+})
+$alineacionDerecha.addEventListener("click",()=>{
+      $topTextMain.style.justifyContent= "end";
+      $textoInferiorMain.style.justifyContent= "end";
+})
+
+/*----------color fuente------------*/
+const $color = $("#color");
+const $colorFondo =$("#colorFondo")
+
+
+$color.addEventListener("input",()=>{
+     
+      $topTextMain.style.color = $color.value;
+      $textoInferiorMain.style.color = $color.value;
+})
+
+$colorFondo.addEventListener("input",()=>{
+      $topTextMain.style.backgroundColor = $colorFondo.value;
+      $textoInferiorMain.style.backgroundColor = $colorFondo.value;
+
+})
+/*------------transparente------*/
+const $transparente = $("#transparente");
+$transparente.addEventListener("change",()=> {
+      $topTextMain.style.backgroundColor = "transparent";
+      $textoInferiorMain.style.backgroundColor = "transparent";
+})
+/*----------CONTORNO TEXTO-------------*/
+const $contornoNinguno =$("#contornoNinguno");
+const $contornoClaro = $("#contornoClaro");
+const $contornoOscuro = $("#contornoOscuro")
+
+$contornoNinguno.addEventListener("click",()=>{
+      $topTextMain.style.textShadow = "none";
+      $textoInferiorMain.style.textShadow = "none"; 
+})
+
+$contornoClaro.addEventListener("click",()=>{
+      $topTextMain.style.textShadow = "2px 2px 5px white";
+      $textoInferiorMain.style.textShadow = "2px 2px 5px white";
+})
+$contornoOscuro.addEventListener("click",()=>{
+      $topTextMain.style.textShadow = "2px 2px 5px black";
+      $textoInferiorMain.style.textShadow = "2px 2px 5px black";
+
+
+})
+
+
+
 
 
 

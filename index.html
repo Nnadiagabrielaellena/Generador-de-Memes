@@ -126,10 +126,10 @@
                         <label for="">Sin texto Inferior</label>
                   </div>
                   <label for="">FUENTE</label>
-                  <select name="" id="">
+                  <select id ="seleccionFuente" name="" >
                         <option id="arial" value="">Arial</option>
-                        <option id ="Arial Black"value="">Arial Black</option>
-                        <option value="">American Typewriter</option>
+                        <option id ="arialBlack"value="arialBlack">Arial Black</option>
+                        <option id="AmericanTypewriter" value="">American Typewriter</option>
                         <option value="">Andale Mono</option>
                         <option value="">Comics Sans MS</option>
                         <option value="">Helvetica</option>
@@ -139,30 +139,30 @@
                   </select>
                   <div>
                         <input id ="tamano"type="number">
-                        <i class="fa-solid fa-align-left"></i>
-                        <i class="fa-sharp fa-solid fa-align-center"></i>
-                        <i class="fa-sharp fa-solid fa-align-right"></i>
+                        <i id ="alineacionIzq"class="fa-solid fa-align-left"></i>
+                        <i id ="alineacionCentral" class="fa-sharp fa-solid fa-align-center"></i>
+                        <i id="alineacionDerecha"class="fa-sharp fa-solid fa-align-right"></i>
 
                   </div>
                   <div class="cont-input-Color">
 
                         <label for="COLOR">COLOR</label>
-                        <input placeholder="#000000" type="text" name="" id="">
+                        <input id="color" placeholder="#000000" type="color" name="" id="">
 
                         <label for="">FONDO</label>
-                        <input placeholder="#FFFFFF" PLKA type="text" name="" id="">
+                        <input id ="colorFondo"placeholder="#FFFFFF" PLKA type="color" name="" id="">
 
                   </div>
                   <div>
-                        <input type="checkbox" name="" id="">
-                        <label for="">Fondo Transparente</label>
+                        <input id="transparente" type="checkbox" name="" id="">
+                        <label  for="">Fondo Transparente</label>
                   </div>
 
                   <label for="CONTORNO">CONTORNO</label>
                   <div class="cont-input-contorno">
-                        <button>Ninguno</button>
-                        <button>Claro</button>
-                        <button>Oscuro</button>
+                        <button id="contornoNinguno">Ninguno</button>
+                        <button id="contornoClaro">Claro</button>
+                        <button id="contornoOscuro">Oscuro</button>
                   </div>
 
                   <label for="">ESPACIADO</label>
