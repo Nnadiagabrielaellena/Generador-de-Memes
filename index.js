@@ -59,6 +59,20 @@ $sinTextoInferior.addEventListener("change", () => {
             $textoInferiorMain.style.color = "black"
       };
 })
+/*-----FUENTE--------*/
+const $arial = $("#arial");
+
+$arial.addEventListener("change", () => {
+      $textoInferiorMain.style.color = "blue";
+})
+/*-------TAMANO-----------*/
+const $tamano = $("#tamano");
+
+$tamano.addEventListener("click",()=>{
+      $topTextMain.style.fontSize = `${$tamano.value}px`;
+     // $topTextMain.style.color = "red";
+})
+
 
 
 
