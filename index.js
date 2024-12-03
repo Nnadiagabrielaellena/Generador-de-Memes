@@ -11,7 +11,15 @@ $url.addEventListener("input", () => {
 })
 //------COLOR FONDO------------------//
 const $fondo = $("#fondo")
+const $fondo1 = $("#fondo1")
 
+
+$fondo1.addEventListener("input",()=>{
+      $imgMeme.style.backgroundColor = $fondo1.value;
+
+})
+
+/*---------FILTROS--------------*/
 
 $fondo.addEventListener("change", () => {
       const $filtrovalor = $fondo.value
@@ -86,6 +94,29 @@ $negative.addEventListener("change", () => {
       $imgMeme.style.filter = `invert(${$negative.value})`
 })
 
+/*-------------restablecer--------------------*/
+const $reestablecerV= $("#reestablecerV")
+
+function reestablecerValores (){
+      $url.value = "";
+      $imgMeme.value ="";
+      $fondo.value ="0";
+      $fondo1.value= "0";
+      $brillo.value ="0"
+       $brillo.value ="0";
+       $contraste.value ="0";
+      $desenfoque.value ="0";
+       $grises.value ="0"; 
+       $sepia.value ="0"; 
+       $hue.value ="0";
+       $saturado.value ="0"; 
+      $negative.value ="0"; 
+      
+
+}
+
+reestablecerValores()
+$reestablecerV.addEventListener("click",reestablecerValores)
 
 
 
