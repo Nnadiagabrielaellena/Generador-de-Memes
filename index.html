@@ -5,6 +5,12 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+            integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+            crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+            integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+            crossorigin="anonymous"></script>
       <title>Document</title>
       <link rel="stylesheet" href="./index.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +20,7 @@
       <script src="https://kit.fontawesome.com/7505fbf04c.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="body">
 
       <header>
             <div class="title-header">
@@ -27,7 +33,7 @@
             </div>
 
       </header>
-     
+
       <main>
             <div class="container-meme">
                   <div class="canvas-meme">
@@ -55,14 +61,15 @@
 
                   <label class="titulo-aside-imagen">FONDO</label>
                   <div class="contenedor-fondo">
-                        <input placeholder="#FFFFFF" id="fondo" type="text">fffff</input>
-                        <select name="" id="">
+                        <label for="Color">Color</label>
+                        <input type="color"></input>
+                        <select id="fondo" name="" id="">
                               <option value="">Ninguno</option>
-                              <option value="">Aclarar</option>
-                              <option value="">Oscurecer</option>
-                              <option value="">Diferencia</option>
-                              <option value="">Luminosidad</option>
-                              <option value="">Multiplicar</option>
+                              <option value="1.5">Aclarar</option>
+                              <option value="0.5">Oscurecer</option>
+                              <option value="difference">Diferencia</option>
+                              <option value="luminosity">Luminosidad</option>
+                              <option value="multiply">Multiplicar</option>
                         </select>
                   </div>
                   <div class="contenedor-filtros">
@@ -74,36 +81,36 @@
 
                         <div class="titulos-filtro">
                               <label for="">contraste</label>
-                              <input id="contraste" type="range">
+                              <input id="contraste" type="range" min="100%" max="1000%" step="0.1%" value="100%">
                         </div>
                         <div class="titulos-filtro">
                               <label for="desenfoque">desenfoque</label>
-                              <input type="range">
+                              <input id="desenfoque" type="range" min="0" max="10" step="0.1" value="0">
                         </div>
                         <div class="titulos-filtro">
                               <label for="">escala de grises</label>
-                              <input type="range">
+                              <input id="grises" type="range" min="0" max="100%" step="1%" value="0">
                         </div>
                         <div class="titulos-filtro">
                               <label for="">sepia</label>
-                              <input type="range">
+                              <input id="sepia" type="range" min="0" max="100%" step="1" value="0">
                         </div>
                         <div class="titulos-filtro">
                               <label for="">hue</label>
-                              <input type="range">
+                              <input id="hue" type="range" min="0" max="359deg" step="1deg" value="0deg">
                         </div>
                         <div class="titulos-filtro">
                               <label for="">saturado</label>
-                              <input type="range">
+                              <input id="saturado" type="range" min="100%" max="1000%" step="10%" value="100%">
                         </div>
 
                         <div class="titulos-filtro">
                               <label for="">negativo</label>
-                              <input type="range">
+                              <input id="negative" type="range" min="0" max="1" step="0.1" value="1">
 
                         </div>
                         <div class="contenedor-restablecer">
-                              <button>restablecer filtros</button>
+                              <button id="restablecer">restablecer filtros</button>
                         </div>
 
 
@@ -113,10 +120,10 @@
             <div class="asideTexto">
                   <h2>TEXTO</h2>
                   <label for="ddddd">SUPERIOR</label>
-                  <input id ="top-tex"placeholder="TOP TEXT" type="text">
+                  <input id="top-tex" placeholder="TOP TEXT" type="text">
                   <div>
                         <input id="sinTextoSuperior" type="checkbox" name="" id="">
-                        <label  for="">Sin texto Superior</label>
+                        <label for="">Sin texto Superior</label>
                   </div>
 
                   <label for="ddddd">INFERIOR</label>
@@ -126,9 +133,9 @@
                         <label for="">Sin texto Inferior</label>
                   </div>
                   <label for="">FUENTE</label>
-                  <select id ="seleccionFuente" name="" >
+                  <select id="seleccionFuente" name="">
                         <option id="arial" value="">Arial</option>
-                        <option id ="arialBlack"value="arialBlack">Arial Black</option>
+                        <option id="arialBlack" value="arialBlack">Arial Black</option>
                         <option id="AmericanTypewriter" value="">American Typewriter</option>
                         <option value="">Andale Mono</option>
                         <option value="">Comics Sans MS</option>
@@ -138,10 +145,10 @@
                         <option value="">Times New Roman</option>
                   </select>
                   <div>
-                        <input id ="tamano"type="number">
-                        <i id ="alineacionIzq"class="fa-solid fa-align-left"></i>
-                        <i id ="alineacionCentral" class="fa-sharp fa-solid fa-align-center"></i>
-                        <i id="alineacionDerecha"class="fa-sharp fa-solid fa-align-right"></i>
+                        <input id="tamano" type="number" min="0" max="57px">
+                        <i id="alineacionIzq" class="fa-solid fa-align-left"></i>
+                        <i id="alineacionCentral" class="fa-sharp fa-solid fa-align-center"></i>
+                        <i id="alineacionDerecha" class="fa-sharp fa-solid fa-align-right"></i>
 
                   </div>
                   <div class="cont-input-Color">
@@ -150,12 +157,12 @@
                         <input id="color" placeholder="#000000" type="color" name="" id="">
 
                         <label for="">FONDO</label>
-                        <input id ="colorFondo"placeholder="#FFFFFF" PLKA type="color" name="" id="">
+                        <input id="colorFondo" placeholder="#FFFFFF" PLKA type="color" name="" id="">
 
                   </div>
                   <div>
                         <input id="transparente" type="checkbox" name="" id="">
-                        <label  for="">Fondo Transparente</label>
+                        <label for="">Fondo Transparente</label>
                   </div>
 
                   <label for="CONTORNO">CONTORNO</label>
@@ -166,10 +173,10 @@
                   </div>
 
                   <label for="">ESPACIADO</label>
-                  <input type="number">
+                  <input id="espaciado" type="number" min="0" max="60">
                   <label for="">INTERLINEADO</label>
-                  <select name="" id="">
-                        <option value="">0.8</option>
+                  <select id="interlineado" name="" id="">
+                        <option id="opcion1" value="">0.8</option>
                         <option value="">1</option>
                         <option value="">1.2</option>
                         <option value="">1.5</option>
@@ -188,7 +195,7 @@
       </aside>
       <footer class="conteiner-descargar">
 
-            <button class="button-descargar">descargar meme</button>
+            <button id="descargar" class="button-descargar">descargar meme</button>
 
       </footer>
 

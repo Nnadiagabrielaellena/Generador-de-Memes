@@ -4,7 +4,7 @@ body {
 }
 
 header {
-      height: 65%;
+      height: 150px;
       width: 100%;
       background-color: black;
       color: white;
@@ -23,6 +23,7 @@ h1 {
 
 header .container-buttons {
       display: flex;
+      
       width: 30%;
       align-items: center;
       justify-content: center;
@@ -38,7 +39,7 @@ header .container-buttons {
 }
 
 main {
-      height: 600px;
+      height: 800px;
       width: 100%;
       border: 2px solid black;
       display: flex;
@@ -47,7 +48,7 @@ main {
 }
 
 body main .container-meme {
-      height: 600px;
+      height: 800px;
       width: 90%;
       max-width: 600px;
 }
@@ -69,7 +70,7 @@ body main .container-meme .canvas-meme p {
 }
 
 body main .container-meme .canvas-meme #imgMeme {
-      height: 400px;
+      height: 700px;
       width: 100%;
       
       
@@ -111,8 +112,7 @@ body .asideImagen {
       flex-direction: column;
       height: 700px;
       justify-content: space-between;
-      display: none;
-
+      
 
 
 }
@@ -120,6 +120,7 @@ body .asideImagen {
 aside .titulo-imagen {
       background-color: black;
       color: white;
+
 }
 
 body aside .asideImagen .titulo-aside-imagen {
@@ -132,9 +133,10 @@ body aside .asideImagen .titulo-aside-imagen {
 
 }
 
-body aside .asideImagen .titulo-aside-imagen .contenedor-fondo {
+body  .asideImagen  .contenedor-fondo {
       display: flex;
       flex-direction: column;
+      color: white;
 }
 
 
@@ -167,7 +169,7 @@ aside .contenedor-filtros .titulos-filtro {
       justify-content: space-between;
       height: 900px;
       color: white;
-      display: block;
+      display: none;
 
 
 
@@ -181,6 +183,7 @@ aside .asideTexto .cont-input-Color {
       display: flex;
       flex-direction: column;
       margin-top: 2rem;
+      
 }
 
 aside .asideTexto .cont-input-contorno {
