@@ -1,6 +1,40 @@
+
+
 function $(selector) {
       return document.querySelector(selector);
 }
+/*------------modo claroOscuro-----------*/
+const $ClaroOscuro = $("#ClaroOscuro")
+
+
+$ClaroOscuro.addEventListener("click", () => {
+      $body.style.backgroundColor = "red";
+      $imgMeme.style.backgroundColor = 'red'
+
+
+})
+
+/*----------aside imagen-------------*/
+const $imagen = $("#imagen")
+const $asideImagen = $(".asideImagen")
+
+$imagen.addEventListener("click", () => {
+      $asideImagen.style.display = "flex";
+      $asideTexto.style.display = "none"
+})
+
+/*------aside texto--------*/
+const $texto = $("#texto");
+const $asideTexto = $(".asideTexto")
+
+$texto.addEventListener("click", () => {
+    $asideTexto.style.display ="flex"
+    $asideImagen.style.display ="none"
+     
+})
+
+
+
 
 //----------url------------//
 const $url = document.querySelector("#url");
@@ -14,7 +48,7 @@ const $fondo = $("#fondo")
 const $fondo1 = $("#fondo1")
 
 
-$fondo1.addEventListener("input",()=>{
+$fondo1.addEventListener("input", () => {
       $imgMeme.style.backgroundColor = $fondo1.value;
 
 })
@@ -27,11 +61,11 @@ $fondo.addEventListener("change", () => {
       switch ($filtrovalor) {
             case "1": // Ninguno (sin filtro)
                   $imgMeme.style.filter = "none";
-                  
+
                   break;
             case "1.5": // Aclarar
                   $imgMeme.style.filter = "brightness(1.5)";
-                 
+
                   break;
             case "0.5": // Oscurecer
                   $imgMeme.style.filter = "brightness(0.5)";
@@ -42,29 +76,29 @@ $fondo.addEventListener("change", () => {
                   $imgMeme.style.mixBlendMode = "difference";
                   break;
             case "luminosity":
-                 
-                  $imgMeme.style.mixBlendMode = "luminosity"; 
+
+                  $imgMeme.style.mixBlendMode = "luminosity";
                   break;
             case "multiply":
-                  
-                  $imgMeme.style.mixBlendMode = "multiply"; 
+
+                  $imgMeme.style.mixBlendMode = "multiply";
                   break;
             default:
                   $imgMeme.style.filter = "none";
-                  $imgMeme.style.mixBlendMode = "normal"; 
+                  $imgMeme.style.mixBlendMode = "normal";
       }
 });
 
 
 //----------FILTYROS----------------------//
-const $brillo =$("#brillo");
+const $brillo = $("#brillo");
 const $contraste = $("#contraste")
 const $desenfoque = $("#desenfoque")
 const $grises = $("#grises")
 const $sepia = $("#sepia")
 const $hue = $("#hue")
-const $saturado =$("#saturado")
-const $negative =$("#negative")
+const $saturado = $("#saturado")
+const $negative = $("#negative")
 
 
 $brillo.addEventListener("change", () => {
@@ -95,28 +129,30 @@ $negative.addEventListener("change", () => {
 })
 
 /*-------------restablecer--------------------*/
-const $reestablecerV= $("#reestablecerV")
+const $reestablecerV = $("#reestablecerV")
 
-function reestablecerValores (){
+function reestablecerValores() {
       $url.value = "";
-      $imgMeme.value ="";
-      $fondo.value ="0";
-      $fondo1.value= "0";
-      $brillo.value ="0"
-       $brillo.value ="0";
-       $contraste.value ="0";
-      $desenfoque.value ="0";
-       $grises.value ="0"; 
-       $sepia.value ="0"; 
-       $hue.value ="0";
-       $saturado.value ="0"; 
-      $negative.value ="0"; 
-      
+      $imgMeme.value = "";
+      $fondo.value = "0";
+      $fondo1.value = "0";
+      $brillo.value = "0"
+      $brillo.value = "0";
+      $contraste.value = "0";
+      $desenfoque.value = "0";
+      $grises.value = "0";
+      $sepia.value = "0";
+      $hue.value = "0";
+      $saturado.value = "0";
+      $negative.value = "0";
+
 
 }
 
-reestablecerValores()
-$reestablecerV.addEventListener("click",reestablecerValores)
+//reestablecerValores()
+$reestablecerV.addEventListener("click", reestablecerValores)
+
+
 
 
 
@@ -187,7 +223,7 @@ const $tamano = $("#tamano");
 $tamano.addEventListener("click", () => {
       $topTextMain.style.fontSize = `${$tamano.value}px`;
       $textoInferiorMain.style.fontSize = `${$tamano.value}px`;
-      // $topTextMain.style.color = "red";
+
 })
 
 /*----------ALINEACION-----------*/
