@@ -1,6 +1,7 @@
 body {
       background-color: black;
       position: relative;
+      
 
 }
 
@@ -8,11 +9,13 @@ body {
 body .modoClaro {
       background-color: white;
       color: black;
+      display: none;
+      
 
 }
 
 header {
-      height: 150px;
+      height: 120px;
       width: 100%;
       background-color: black;
       color: white;
@@ -49,7 +52,7 @@ header .container-buttons {
 }
 
 main {
-      height: 800px;
+      height: 600px;
       width: 100%;
       border: 2px solid black;
       display: flex;
@@ -57,15 +60,18 @@ main {
       align-items: center;
 }
 
-body main .container-meme {
-      height: 800px;
+.canvasMeme {
+      height: 600px;
       width: 90%;
       max-width: 600px;
+
+     
+
 }
 
-body main .container-meme .canvas-meme p {
+body main .canvasMeme .titulo {
       margin: 0;
-      height: 50px;
+      height: 100px;
       width: 100%;
       display: flex;
       align-items: center;
@@ -75,16 +81,15 @@ body main .container-meme .canvas-meme p {
       border: 2px solid black;
       font-family: Anton;
       font-size: 1rem;
+      flex-wrap: wrap;
+      
 
 
 }
 
-body main .container-meme .canvas-meme #imgMeme {
-      height: 700px;
+body main .canvasMeme #imgMeme {
+      height: 400px;
       width: 100%;
-
-
-
 }
 
 body header button {
@@ -96,19 +101,21 @@ body header button {
 }
 
 body .conteiner-descargar {
-      height: 100px;
+      height: 50px;
       display: flex;
 
       justify-content: center;
       align-items: center;
+      
 
 
 }
 
 body .conteiner-descargar .button-descargar {
-      height: 50px;
-      width: 20%;
+      height: 40px;
+      width: 10%;
       background-color: #2e7d32;
+      border-radius: 10px;
 
 }
 
@@ -168,6 +175,7 @@ aside .contenedor-filtros .titulos-filtro {
       align-items: center;
       justify-content: center;
       margin-top: 30px;
+      
 }
 
 .asideTexto {
@@ -182,6 +190,7 @@ aside .contenedor-filtros .titulos-filtro {
       height: 900px;
       color: white;
       display: none;
+      
 
 
 
@@ -203,4 +212,7 @@ aside .asideTexto .cont-input-contorno {
       display: flex;
       margin-top: 2rem;
 
+}
+ .conteiner-descargar {
+      margin-top: 200px;
 }

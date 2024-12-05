@@ -20,40 +20,35 @@
       <script src="https://kit.fontawesome.com/7505fbf04c.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="modoClaro" >
+<body class="modoClaro">
       <header>
             <div class="title-header">
                   <h1>Generador de Memes</h1>
             </div>
             <div class=container-buttons>
                   <button id="imagen" class="button-tit">imagen</button>
-                  <button id ="texto" class="button-tit ">texto</button>
+                  <button id="texto" class="button-tit ">texto</button>
                   <button id="ClaroOscuro" class="button-tit">modo oscuro</button>
             </div>
 
       </header>
 
       <main>
-            <div class="container-meme">
-                  <div class="canvas-meme">
-                        <p id="topTextMain">TOP TEXT</p>
-                        <div id="imgMeme">
-                        </div>
-                        <p id="topText">Bottom TEXT</p>
+
+            <div class="canvasMeme">
+                  <p class="titulo" id="topTextMain">TOP TEXT</p>
+                  <div id="imgMeme">
                   </div>
-
-
-
-
+                  <p class="titulo" id="topText">Bottom TEXT</p>
 
             </div>
       </main>
 
       <aside>
-            <div  class="asideImagen">
+            <div class="asideImagen">
                   <h2 class="titulo-imagen">IMAGEN</h2>
                   <div>
-                        <label class="titulo-aside-imagen">URL</label>
+                        <label class="titulo-aside-imagen"  >URL</label>
                         <input id="url" type="text">
                   </div>
 
@@ -61,7 +56,7 @@
                   <label class="titulo-aside-imagen">FONDO</label>
                   <div class="contenedor-fondo">
                         <label for="Color">Color</label>
-                        <input id ="fondo1"type="color"></input>
+                        <input id="fondo1" type="color"></input>
                         <select id="fondo" name="" id="">
                               <option value="">Ninguno</option>
                               <option value="1.5">Aclarar</option>
@@ -133,18 +128,18 @@
                   </div>
                   <label for="">FUENTE</label>
                   <select id="seleccionFuente" name="">
-                        <option id="arial" value="">Arial</option>
-                        <option id="arialBlack" value="arialBlack">Arial Black</option>
-                        <option id="AmericanTypewriter" value="">American Typewriter</option>
-                        <option value="">Andale Mono</option>
-                        <option value="">Comics Sans MS</option>
-                        <option value="">Helvetica</option>
-                        <option value="">Impact</option>
-                        <option value="">Verdana</option>
-                        <option value="">Times New Roman</option>
+                        <option value="Arial">Arial</option>
+                        <option id="Black" value="Black">Arial Black</option>
+                        <option id="American Typewriter" value="">American Typewriter</option>
+                        <option value="Andale Mono">Andale Mono</option>
+                        <option value="Comics Sans MS">Comics Sans MS</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
                   </select>
                   <div>
-                        <input id="tamano" type="number" min="0" max="57px">
+                        <input id="tamano" type="number" min="40" max="57">
                         <i id="alineacionIzq" class="fa-solid fa-align-left"></i>
                         <i id="alineacionCentral" class="fa-sharp fa-solid fa-align-center"></i>
                         <i id="alineacionDerecha" class="fa-sharp fa-solid fa-align-right"></i>
@@ -175,12 +170,12 @@
                   <input id="espaciado" type="number" min="0" max="60">
                   <label for="">INTERLINEADO</label>
                   <select id="interlineado" name="" id="">
-                        <option id="opcion1" value="">0.8</option>
-                        <option value="">1</option>
-                        <option value="">1.2</option>
-                        <option value="">1.5</option>
-                        <option value="">2</option>
-                        <option value="">2.5</option>
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
                   </select>
 
 

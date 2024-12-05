@@ -3,16 +3,8 @@
 function $(selector) {
       return document.querySelector(selector);
 }
-/*------------modo claroOscuro-----------*/
-const $ClaroOscuro = $("#ClaroOscuro")
 
 
-$ClaroOscuro.addEventListener("click", () => {
-      $body.style.backgroundColor = "red";
-      $imgMeme.style.backgroundColor = 'red'
-
-
-})
 
 /*----------aside imagen-------------*/
 const $imagen = $("#imagen")
@@ -39,10 +31,17 @@ $texto.addEventListener("click", () => {
 //----------url------------//
 const $url = document.querySelector("#url");
 const $imgMeme = document.querySelector("#imgMeme");
+const $urlValue = $url.value
 
 $url.addEventListener("input", () => {
       $imgMeme.innerHTML = `<img src="${$url.value}" >`
+      $urlValue.style.maxHeight= "400px"
+      
+      
+      
 })
+
+
 //------COLOR FONDO------------------//
 const $fondo = $("#fondo")
 const $fondo1 = $("#fondo1")
@@ -165,6 +164,7 @@ const $sinTextoSuperior = $("#sinTextoSuperior")
 
 $topText.addEventListener("input", (e) => {
       $topTextMain.innerText = e.target.value;
+      
 
 })
 $sinTextoSuperior.addEventListener("change", () => {
@@ -191,31 +191,18 @@ $sinTextoInferior.addEventListener("change", () => {
 })
 /*-----FUENTE--------*/
 const $seleccionFuente = $("#seleccionFuente");
-const $textSuperiorInferior = [$topTextMain, $textoInferiorMain];
+const $titulo = $(".titulo")
 
-const $arial = $("#arial")
-const $arialBlack = $("#arialBlack");
-const $AmericanTypewriter = $("#AmericanTypewriter")
-
-$seleccionFuente.addEventListener("change", function () {
-      const $seleccionFuenteValue = $seleccionFuente.value;
-
-      switch ($seleccionFuenteValue) {
-            case "$arial":
-                  $topTextMain.style.fontFamily = "Arial";
-                  break;
-
-            case "$arialBlack.value":
-
-                  applyFontFamily("Arial Black, sans-serif");
-                  break;
-
-
-
-
-      }
+$seleccionFuente.addEventListener("change",()=>{
+      $topTextMain.style.fontFamily = $seleccionFuente.value;
+     
+    
 })
-//$topTextMain.style.color ="red"
+$seleccionFuente.addEventListener("change",()=>{
+      $textoInferiorMain.style.fontFamily = $seleccionFuente.value
+})
+
+
 
 /*-------TAMANO-----------*/
 const $tamano = $("#tamano");
@@ -290,31 +277,28 @@ $contornoOscuro.addEventListener("click", () => {
 /*---------ESPACIADO------------*/
 const $espaciado = $("#espaciado");
 
+
 $espaciado.addEventListener("input", () => {
 
       $topTextMain.style.paddingTop = `${$espaciado.value}px`;
-      $textoInferiorMain.style.paddingTop = `${$espaciado.value}px`;
+      $textoInferiorMain.style.paddingBottom = `${$espaciado.value}px`;
 
 })
 /*---------INTELINEADO-----------*/
 const $interlineado = $("#interlineado");
-const $opcion1 = $("#opcion1")
+
+
 
 $interlineado.addEventListener("change", () => {
-      const $interlineadoValue = $interlineado.val();
-      if ($interlineadoValue) {
-            $textoInferiorMain.style.lineHeight = $interlineadoValue;
-
-      }
-
-
+    $topTextMain.style.lineHeight = $interlineado.value
+    
 
 
 })
 
 /*-------RESTABLECER FILTROS------*/
 const $restablecer = $("#restablecer");
-const $body = $("#body")
+const $body = $("body")
 
 $restablecer.addEventListener("click", () => {
       $body.value = ""
@@ -330,5 +314,12 @@ $descargar.addEventListener("click", () => {
 
 })
 
-//--})-----------//
+//--})---MODO OSCURO--------//
+const $ClaroOscuro = $("#ClaroOscuro")
+const $modoClaro =$(".modoClaro")
+
+
+$ClaroOscuro.addEventListener("click",()=>{
+      $body.classList.toggle($modoClaro)
+})
 
