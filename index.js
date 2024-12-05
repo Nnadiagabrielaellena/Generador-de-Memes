@@ -1,4 +1,5 @@
 
+window.onload = () => {
 
 function $(selector) {
       return document.querySelector(selector);
@@ -13,7 +14,13 @@ const $asideImagen = $(".asideImagen")
 $imagen.addEventListener("click", () => {
       $asideImagen.style.display = "flex";
       $asideTexto.style.display = "none"
+       
+     
+      
+            
+    
 })
+
 
 /*------aside texto--------*/
 const $texto = $("#texto");
@@ -33,10 +40,17 @@ const $url = document.querySelector("#url");
 const $imgMeme = document.querySelector("#imgMeme");
 const $urlValue = $url.value
 
+
+
 $url.addEventListener("input", () => {
-      $imgMeme.innerHTML = `<img src="${$url.value}" >`
-      $urlValue.style.maxHeight= "400px"
       
+      $imgMeme.innerHTML = `<img src="${$url.value}" >`
+   
+
+      
+      
+      
+     
       
       
 })
@@ -131,7 +145,9 @@ $negative.addEventListener("change", () => {
 const $reestablecerV = $("#reestablecerV")
 
 function reestablecerValores() {
+      
       $url.value = "";
+      
       $imgMeme.value = "";
       $fondo.value = "0";
       $fondo1.value = "0";
@@ -146,10 +162,12 @@ function reestablecerValores() {
       $negative.value = "0";
 
 
-}
 
-//reestablecerValores()
+
+}
 $reestablecerV.addEventListener("click", reestablecerValores)
+
+
 
 
 
@@ -306,10 +324,11 @@ $restablecer.addEventListener("click", () => {
 /*------clase----*/
 
 const $descargar = $("#descargar")
+const $canvasMeme =$(".canvasMeme")
 
 $descargar.addEventListener("click", () => {
-      domtoimage.toBlob($imgMeme).then((blob) => {
-            saveAs(blob, "my-meme.png");
+      domtoimage.toBlob($canvasMeme).then((blob) => {
+            saveAs(blob, "meme.png");
       });
 
 })
@@ -322,4 +341,4 @@ const $modoClaro =$(".modoClaro")
 $ClaroOscuro.addEventListener("click",()=>{
       $body.classList.toggle($modoClaro)
 })
-
+}
