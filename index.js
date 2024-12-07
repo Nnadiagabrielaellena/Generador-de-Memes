@@ -11,7 +11,7 @@ window.onload = () => {
       const $asideTexto = $(".asideTexto")
       const $url = document.querySelector("#url");
       const $imgMeme = document.querySelector("#imgMeme");
-      aplique
+      
       const $img = $("#img")
       const $fondo = $("#fondo")
       const $fondo1 = $("#fondo1")
