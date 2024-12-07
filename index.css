@@ -1,28 +1,21 @@
 * {
-      transition: all 0.3s ease; 
-  }
-
-body {
-      background-color: black;
-      position: relative;
-      
+      transition: all 0.3s ease;
 
 }
-
-/*---------body modo claro---------------*/
-body .modoClaro {
+.modoclaro {
       background-color: white;
       color: black;
-      display: none;
-      
-
+      position: relative;
 }
 
-header {
-      height: 120px;
-      width: 100%;
+.modoOscuro {
       background-color: black;
       color: white;
+      position: relative;
+}
+body .encabezado {
+      height: 120px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -30,47 +23,43 @@ header {
       flex-wrap: wrap;
 }
 
-h1 {
+body .encabezado .title-encabezado h1 {
       width: 100%;
       font-family: comic sans-serif;
 
 }
 
-header .container-buttons {
+body .encabezado .container-buttons {
       display: flex;
-
       width: 30%;
       align-items: center;
-      justify-content: center;
-
+      justify-content: space-between;
 }
- .container-buttons button{
-      font-size: 1rem;
- }
 
-.container-buttons .button-tit {
+body .encabezado .container-buttons button {
+      font-size: 1rem;
+      border-radius: 3px;
+      background-color: rgb(144, 139, 149);
+}
+
+body .encabezado .container-buttons .button-tit {
       justify-content: center;
       margin-bottom: 1rem;
       border: black;
-
 }
 
-main {
+body main {
       height: 600px;
       width: 100%;
-      border: 2px solid black;
       display: flex;
       justify-content: space-around;
       align-items: center;
 }
 
-.canvasMeme {
+body main .canvasMeme {
       height: 600px;
       width: 90%;
       max-width: 600px;
-
-     
-
 }
 
 body main .canvasMeme .titulo {
@@ -80,39 +69,98 @@ body main .canvasMeme .titulo {
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: white;
+      background-color: rgb(216, 213, 213);
       color: black;
-      border: 2px solid black;
       font-family: Anton;
       font-size: 1rem;
       flex-wrap: wrap;
-      
-
-
 }
 
 body main .canvasMeme #imgMeme {
       height: 400px;
       width: 100%;
+      background-position: cover;
 }
 
-body header button {
-
+body main #img {
+      height: 400px;
       width: 100%;
-      background-color: black;
-      color: white;
-      border-bottom: black;
+}
+body aside .asideImagen {
+      width: 20%;position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      height: 1000px;
+      justify-content: space-between;
+      display: none;
+}
+body aside .asideImagen .titulo-aside-imagen {
+
+      justify-content: start;
+      display: flex;
+      height: 10px;
+      margin: 1rem;
 }
 
+body .asideImagen .contenedor-fondo {
+      display: flex;
+      flex-direction: column;
+color: black;
+
+}
+body aside .asideImagen .contenedor-filtros {
+margin-top: 3rem;
+}
+
+body aside .contenedor-filtros .titulos-filtro {
+      display: flex;
+      flex-direction: column;
+}
+body aside .contenedor-filtros .contenedor-restablecer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+
+}
+body aside .asideTexto {
+      width: 20%;
+position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 1000px;
+      display: none;
+      border: 2px solid rgb(162, 161, 161);
+}
+
+body aside  input {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+}
+
+body aside .asideTexto .cont-input-Color {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+
+}
+
+body aside .asideTexto .cont-input-contorno {
+      display: flex;
+      margin-top: 2rem;
+
+}
 body .conteiner-descargar {
       height: 50px;
       display: flex;
-
-      justify-content: center;
+margin-top: 150px;
+justify-content: center;
       align-items: center;
-      
-
-
 }
 
 body .conteiner-descargar .button-descargar {
@@ -122,107 +170,8 @@ body .conteiner-descargar .button-descargar {
       border-radius: 10px;
 
 }
-
-.asideImagen {
-      width: 15%;
-      background-color: black;
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      flex-direction: column;
-      height: 700px;
-      justify-content: space-between;
-      display: none;
-
-
-
-
-}
-
-aside .titulo-imagen {
-      background-color: black;
-      color: white;
-
-}
-
-body aside .asideImagen .titulo-aside-imagen {
-      background-color: black;
-      color: white;
-      justify-content: start;
-      display: flex;
-      height: 10px;
-      margin: 1rem;
-
-}
-
-body .asideImagen .contenedor-fondo {
-      display: flex;
-      flex-direction: column;
-      color: white;
-}
-
-
-
-aside .asideImagen .contenedor-filtros {
-      color: white;
-      margin-top: 3rem;
-}
-
-aside .contenedor-filtros .titulos-filtro {
-      display: flex;
-      flex-direction: column;
-}
-
-.contenedor-restablecer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 30px;
-      
-}
-
-.asideTexto {
-      width: 15%;
-      background-color: black;
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 900px;
-      color: white;
-      display: none;
-      
-      
-
-
-
-}
-
-input {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-}
-
-aside .asideTexto .cont-input-Color {
-      display: flex;
-      flex-direction: column;
-      margin-top: 2rem;
-
-}
-
-aside .asideTexto .cont-input-contorno {
-      display: flex;
-      margin-top: 2rem;
-
-}
- .conteiner-descargar {
-      margin-top: 200px;
-}
-@media (min-whidth :768px){
-      .asideImagen{
-          display: none;
+@media (min-whidth :768px) {
+      .asideImagen {
+            display: none;
       }
 }

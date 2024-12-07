@@ -13,31 +13,29 @@
             crossorigin="anonymous"></script>
       <title>Document</title>
       <link rel="stylesheet" href="./index.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-            rel="stylesheet">
+
+
       <script src="https://kit.fontawesome.com/7505fbf04c.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="modoClaro">
-      <header>
-            <div class="title-header">
+<body class="modoOscuro">
+      <div class="encabezado">
+            <div class="title-encabezado">
                   <h1>Generador de Memes</h1>
             </div>
             <div class=container-buttons>
                   <button id="imagen" class="button-tit">imagen</button>
                   <button id="texto" class="button-tit ">texto</button>
                   <button id="ClaroOscuro" class="button-tit">modo oscuro</button>
-            </div>
 
-      </header>
+            </div>
+      </div>
 
       <main>
-
             <div class="canvasMeme">
                   <p class="titulo" id="topTextMain">TOP TEXT</p>
                   <div id="imgMeme">
+                        <img id="img" alt="">
                   </div>
                   <p class="titulo" id="topText">Bottom TEXT</p>
 
@@ -45,16 +43,16 @@
       </main>
 
       <aside>
-            <div class="asideImagen">
-                  <h2 class="titulo-imagen">IMAGEN</h2>
+            <div class="asideImagen modoOscuro">
+                  <h2 class="titulo-imagen ">IMAGEN</h2>
                   <div>
-                        <label class="titulo-aside-imagen">URL</label>
+                        <label class="titulo-aside-imagen ">URL</label>
                         <input id="url" type="text">
                   </div>
 
 
-                  <label class="titulo-aside-imagen">FONDO</label>
-                  <div class="contenedor-fondo">
+                  <label class="titulo-aside-imagen ">FONDO</label>
+                  <div class="contenedor-fondo ">
                         <label for="Color">Color</label>
                         <input id="fondo1" type="color"></input>
                         <select id="fondo" name="" id="">
@@ -66,26 +64,26 @@
                               <option value="multiply">Multiplicar</option>
                         </select>
                   </div>
-                  <div class="contenedor-filtros">
-                        <h3 class="titulo-aside">FILTROS</h3>
-                        <div class="titulos-filtro">
+                  <div class="contenedor-filtros ">
+                        <h3 class="titulo-aside ">FILTROS</h3>
+                        <div class="titulos-filtro ">
                               <label for="brillo">brillo</label>
                               <input id="brillo" type="range" min="0" max="1" step="0.1">
                         </div>
 
-                        <div class="titulos-filtro">
+                        <div class="titulos-filtro ">
                               <label for="">contraste</label>
                               <input id="contraste" type="range" min="100%" max="1000%" step="0.1%" value="100%">
                         </div>
-                        <div class="titulos-filtro">
+                        <div class="titulos-filtro ">
                               <label for="desenfoque">desenfoque</label>
                               <input id="desenfoque" type="range" min="0" max="10" step="0.1" value="0">
                         </div>
-                        <div class="titulos-filtro">
+                        <div class="titulos-filtro ">
                               <label for="">escala de grises</label>
                               <input id="grises" type="range" min="0" max="100%" step="1%" value="0">
                         </div>
-                        <div class="titulos-filtro">
+                        <div class="titulos-filtro ">
                               <label for="">sepia</label>
                               <input id="sepia" type="range" min="0" max="100%" step="1" value="0">
                         </div>
@@ -111,7 +109,7 @@
                   </div>
 
             </div>
-            <div class="asideTexto">
+            <div class="asideTexto modoOscuro">
                   <h2>TEXTO</h2>
                   <label for="ddddd">SUPERIOR</label>
                   <input id="top-tex" placeholder="TOP TEXT" type="text">
@@ -178,20 +176,14 @@
                         <option value="2.5">2.5</option>
                   </select>
 
-
-
-
-
-
-
             </div>
 
       </aside>
-      <footer class="conteiner-descargar">
+      <div class="conteiner-descargar">
 
             <button id="descargar" class="button-descargar">descargar meme</button>
 
-      </footer>
+      </div>
 
       <script src="./index.js"></script>
 </body>
