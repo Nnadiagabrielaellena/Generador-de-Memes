@@ -49,8 +49,6 @@
                         <label class="titulo-aside-imagen ">URL</label>
                         <input id="url" type="text">
                   </div>
-
-
                   <label class="titulo-aside-imagen ">FONDO</label>
                   <div class="contenedor-fondo ">
                         <label for="Color">Color</label>
@@ -99,13 +97,10 @@
                         <div class="titulos-filtro">
                               <label for="">negativo</label>
                               <input id="negative" type="range" min="0" max="1" step="0.1" value="1">
-
                         </div>
                         <div class="contenedor-restablecer">
                               <button id="reestablecerV">reestablecer filtros</button>
                         </div>
-
-
                   </div>
 
             </div>
@@ -137,11 +132,17 @@
                         <option value="Times New Roman">Times New Roman</option>
                   </select>
                   <div>
-                        <input id="tamano" type="number" min="40" max="57">
-                        <i id="alineacionIzq" class="fa-solid fa-align-left"></i>
-                        <i id="alineacionCentral" class="fa-sharp fa-solid fa-align-center"></i>
-                        <i id="alineacionDerecha" class="fa-sharp fa-solid fa-align-right"></i>
+                        <div>
+                              <label for="">Tamano</label>
 
+                              <input id="tamano" type="number" min="40" max="57">
+                        </div>
+                        <div>
+                              <label for="alineacion">Alineacion</label>
+                              <i id="alineacionIzq" class="fa-solid fa-align-left"></i>
+                              <i id="alineacionCentral" class="fa-sharp fa-solid fa-align-center"></i>
+                              <i id="alineacionDerecha" class="fa-sharp fa-solid fa-align-right"></i>
+                        </div>
                   </div>
                   <div class="cont-input-Color">
 
@@ -175,16 +176,13 @@
                         <option value="2">2</option>
                         <option value="2.5">2.5</option>
                   </select>
-
             </div>
 
       </aside>
       <div class="conteiner-descargar">
 
             <button id="descargar" class="button-descargar">descargar meme</button>
-
       </div>
-
       <script src="./index.js"></script>
 </body>
 

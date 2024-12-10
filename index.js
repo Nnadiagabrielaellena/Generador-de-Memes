@@ -1,6 +1,4 @@
 window.onload = () => {
-
-
       const $body = $("body")
       const $aside = $("aside")
       const $main = $("main")
@@ -11,7 +9,6 @@ window.onload = () => {
       const $asideTexto = $(".asideTexto")
       const $url = document.querySelector("#url");
       const $imgMeme = document.querySelector("#imgMeme");
-      
       const $img = $("#img")
       const $fondo = $("#fondo")
       const $fondo1 = $("#fondo1")
@@ -72,9 +69,11 @@ window.onload = () => {
             if ($body.classList.contains("modoOscuro")) {
                   $body.classList.add("modoClaro");
                   $body.classList.remove("modoOscuro")
+                  $ClaroOscuro.innerText ="modo Oscuro"
             } else if ($body.classList.contains("modoClaro")) {
                   $body.classList.add("modoOscuro");
                   $body.classList.remove("modoClaro")
+                  $ClaroOscuro.innerText ="modo Claro"
             }
             if ($asideTexto.classList.contains("modoOscuro")) {
                   $asideTexto.classList.add("modoClaro");
@@ -90,7 +89,6 @@ window.onload = () => {
                   $asideImagen.classList.add("modoOscuro");
                   $asideImagen.classList.remove("modoClaro")
             }
-
       })
       $imagen.addEventListener("click", () => {
             $asideImagen.style.display = "flex";
@@ -102,8 +100,6 @@ window.onload = () => {
 
       })
       $url.addEventListener("input", () => {
-
-
             $img.src = $url.value
       })
       $fondo1.addEventListener("input", () => {
@@ -147,8 +143,6 @@ window.onload = () => {
       $brillo.addEventListener("change", () => {
             $imgMeme.style.filter = `brightness(${$brillo.value})`;
       });
-
-
       $contraste.addEventListener("change", () => {
             $imgMeme.style.filter = `contrast(${$contraste.value}%)`
       })
@@ -183,7 +177,9 @@ window.onload = () => {
             };
       })
       $textoInferior.addEventListener("input", (e) => {
-            $textoInferiorMain.innerText = e.target.value
+            $textoInferiorMain.innerText = e.target.value;
+            
+                  
       })
       $sinTextoInferior.addEventListener("change", () => {
             if ($sinTextoInferior.checked) {
@@ -194,8 +190,6 @@ window.onload = () => {
       })
       $seleccionFuente.addEventListener("change", () => {
             $topTextMain.style.fontFamily = $seleccionFuente.value;
-
-
       })
       $seleccionFuente.addEventListener("change", () => {
             $textoInferiorMain.style.fontFamily = $seleccionFuente.value
@@ -222,14 +216,11 @@ window.onload = () => {
             $topTextMain.style.color = $color.value;
             $textoInferiorMain.style.color = $color.value;
       })
-
       $colorFondo.addEventListener("input", () => {
             $topTextMain.style.backgroundColor = $colorFondo.value;
             $textoInferiorMain.style.backgroundColor = $colorFondo.value;
 
       })
-
-
       $transparente.addEventListener("change", () => {
             $topTextMain.style.backgroundColor = "transparent";
             $textoInferiorMain.style.backgroundColor = "transparent";
@@ -251,11 +242,9 @@ window.onload = () => {
 
             $topTextMain.style.paddingTop = `${$espaciado.value}px`;
             $textoInferiorMain.style.paddingBottom = `${$espaciado.value}px`;
-
       })
       $interlineado.addEventListener("change", () => {
             $topTextMain.style.lineHeight = $interlineado.value
-
       })
       $descargar.addEventListener("click", () => {
 
@@ -263,5 +252,4 @@ window.onload = () => {
                   saveAs(blob, "mi-meme.png");
             });
       })
-
 }

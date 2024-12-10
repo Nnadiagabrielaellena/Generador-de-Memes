@@ -73,7 +73,8 @@ body main .canvasMeme .titulo {
       color: black;
       font-family: Anton;
       font-size: 1rem;
-      flex-wrap: wrap;
+      white-space: nowrap; 
+      overflow-x: auto;
 }
 
 body main .canvasMeme #imgMeme {
@@ -170,8 +171,9 @@ body .conteiner-descargar .button-descargar {
       border-radius: 10px;
 
 }
-@media (min-whidth :768px) {
+@media( min-whidth :768px) {
       .asideImagen {
-            display: none;
+            width: 100%;
+            display: flex;
       }
 }
