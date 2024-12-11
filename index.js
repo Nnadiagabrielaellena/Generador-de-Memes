@@ -28,7 +28,7 @@ window.onload = () => {
       const $sinTextoInferior = $("#sinTextoInferior");
       const $reestablecerV = $("#reestablecerV")
       const $seleccionFuente = $("#seleccionFuente");
-      const $titulo = $(".titulo")
+     
       const $tamano = $("#tamano");
       const $alineacionIzq = $("#alineacionIzq");
       const $alineacionCentral = $("#alineacionCentral");
@@ -99,8 +99,14 @@ window.onload = () => {
             $asideImagen.style.display = "none"
 
       })
+      
       $url.addEventListener("input", () => {
-            $img.src = $url.value
+            $img.src = $url.value;
+            if(isNaN($url.value) === false || $url.value === ""){
+                  alert('URL INCORRECTA')
+            }
+            
+            
       })
       $fondo1.addEventListener("input", () => {
             $imgMeme.style.backgroundColor = $fondo1.value;

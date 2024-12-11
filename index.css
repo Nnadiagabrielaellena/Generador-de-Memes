@@ -98,8 +98,7 @@ body aside .asideImagen {
       display: none;
 }
 body aside .asideImagen .titulo-aside-imagen {
-
-      justify-content: start;
+justify-content: start;
       display: flex;
       height: 10px;
       margin: 1rem;
@@ -136,7 +135,7 @@ position: absolute;
       justify-content: space-between;
       height: 1000px;
       display: none;
-      border: 2px solid rgb(162, 161, 161);
+     
 }
 
 body aside  input {
@@ -171,9 +170,13 @@ body .conteiner-descargar .button-descargar {
       border-radius: 10px;
 
 }
-@media( min-whidth :768px) {
+@media(min-whidth :768px) {
       .asideImagen {
-            width: 100%;
+           
             display: flex;
+      }
+      body{
+            display: none;
+
       }
 }
