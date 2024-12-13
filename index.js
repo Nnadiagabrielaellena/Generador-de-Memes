@@ -28,7 +28,6 @@ window.onload = () => {
       const $sinTextoInferior = $("#sinTextoInferior");
       const $reestablecerV = $("#reestablecerV")
       const $seleccionFuente = $("#seleccionFuente");
-     
       const $tamano = $("#tamano");
       const $alineacionIzq = $("#alineacionIzq");
       const $alineacionCentral = $("#alineacionCentral");
@@ -69,11 +68,11 @@ window.onload = () => {
             if ($body.classList.contains("modoOscuro")) {
                   $body.classList.add("modoClaro");
                   $body.classList.remove("modoOscuro")
-                  $ClaroOscuro.innerText ="modo Oscuro"
+                  $ClaroOscuro.innerText = "modo Oscuro"
             } else if ($body.classList.contains("modoClaro")) {
                   $body.classList.add("modoOscuro");
                   $body.classList.remove("modoClaro")
-                  $ClaroOscuro.innerText ="modo Claro"
+                  $ClaroOscuro.innerText = "modo Claro"
             }
             if ($asideTexto.classList.contains("modoOscuro")) {
                   $asideTexto.classList.add("modoClaro");
@@ -99,15 +98,13 @@ window.onload = () => {
             $asideImagen.style.display = "none"
 
       })
-      
+
       $url.addEventListener("input", () => {
             $img.src = $url.value;
-            if(isNaN($url.value) === false || $url.value === ""){
+            if (isNaN($url.value) === false || $url.value === "") {
                   alert('URL INCORRECTA')
             }
-            
-            
-      })
+})
       $fondo1.addEventListener("input", () => {
             $imgMeme.style.backgroundColor = $fondo1.value;
 
@@ -116,16 +113,16 @@ window.onload = () => {
             const $filtrovalor = $fondo.value
 
             switch ($filtrovalor) {
-                  case "1": // Ninguno (sin filtro)
+                  case "1":
                         $imgMeme.style.filter = "none";
 
                         break;
-                  case "1.5": 
-                        $imgMeme.style.filter = "brightness(1.5)"  ;
+                  case "1.5":
+                        $imgMeme.style.filter = "brightness(1.5)";
 
                         break;
                   case "0.5":
-                        $imgMeme.style.filter = "brightness(0.5)"  ;
+                        $imgMeme.style.filter = "brightness(0.5)";
 
                         break;
                   case "difference":
@@ -184,8 +181,8 @@ window.onload = () => {
       })
       $textoInferior.addEventListener("input", (e) => {
             $textoInferiorMain.innerText = e.target.value;
-            
-                  
+
+
       })
       $sinTextoInferior.addEventListener("change", () => {
             if ($sinTextoInferior.checked) {

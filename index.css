@@ -166,7 +166,7 @@ justify-content: center;
 
 body .conteiner-descargar .button-descargar {
       height: 40px;
-      width: 10%;
+      width: 20%;
       background-color: #2e7d32;
       border-radius: 10px;
 
@@ -177,21 +177,32 @@ body .conteiner-descargar .button-descargar {
             width: 100%;
             
       }
+      body .encabezado  {
+            display: flex;
+            flex-direction: column;
+           height: 200px;
+           
+
+      }
       body .encabezado .container-buttons{
             display: flex;
             flex-direction: column;
-            
+            width: 300px;
+      }
+      body .conteiner-descargar .button-descargar{
+            height: 30px;
+            width: 120px;
       }
       body aside .asideImagen{
             display: flex;
-            top:800px;
+            top:1000px;
             left: 0;
             width: 90%;
       }
       body aside .asideTexto{
             display: flex;
             
-            top:800px;
+            top:1000px;
             left: 0;
             width: 90%;
       }
