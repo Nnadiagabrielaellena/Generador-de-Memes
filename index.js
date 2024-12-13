@@ -120,12 +120,12 @@ window.onload = () => {
                         $imgMeme.style.filter = "none";
 
                         break;
-                  case "1.5": // Aclarar
-                        $imgMeme.style.filter = "brightness(1.5)";
+                  case "1.5": 
+                        $imgMeme.style.filter = "brightness(1.5)"  ;
 
                         break;
-                  case "0.5": // Oscurecer
-                        $imgMeme.style.filter = "brightness(0.5)";
+                  case "0.5":
+                        $imgMeme.style.filter = "brightness(0.5)"  ;
 
                         break;
                   case "difference":

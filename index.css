@@ -75,6 +75,7 @@ body main .canvasMeme .titulo {
       font-size: 1rem;
       white-space: nowrap; 
       overflow-x: auto;
+      word-wrap: break-word;
 }
 
 body main .canvasMeme #imgMeme {
@@ -170,13 +171,34 @@ body .conteiner-descargar .button-descargar {
       border-radius: 10px;
 
 }
-@media(min-whidth :768px) {
-      .asideImagen {
-           
+@media (max-width: 768px){
+      body {
+            position: absolute;
+            width: 100%;
+            
+      }
+      body .encabezado .container-buttons{
             display: flex;
+            flex-direction: column;
+            
       }
-      body{
-            display: none;
-
+      body aside .asideImagen{
+            display: flex;
+            top:800px;
+            left: 0;
+            width: 90%;
       }
+      body aside .asideTexto{
+            display: flex;
+            
+            top:800px;
+            left: 0;
+            width: 90%;
+      }
+      
+      
+      
 }
+      
+
+
