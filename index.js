@@ -104,7 +104,7 @@ window.onload = () => {
             if (isNaN($url.value) === false || $url.value === "") {
                   alert('URL INCORRECTA')
             }
-})
+      })
       $fondo1.addEventListener("input", () => {
             $imgMeme.style.backgroundColor = $fondo1.value;
 
@@ -142,7 +142,7 @@ window.onload = () => {
                         $imgMeme.style.mixBlendMode = "normal";
             }
       });
-
+      /*--------------FILTROS-----------------*/
       $brillo.addEventListener("change", () => {
             $imgMeme.style.filter = `brightness(${$brillo.value})`;
       });
@@ -167,6 +167,44 @@ window.onload = () => {
       $negative.addEventListener("change", () => {
             $imgMeme.style.filter = `invert(${$negative.value})`
       })
+
+      /*FUNCION ACTUALIUZAR FILTRO---------*/
+      function actualizarFiltros() {
+            let filtros = '';
+
+
+            if ($brillo.value !== '100') {
+                  filtros += `brightness(${$brillo.value}) `;
+            }
+            if ($contraste.value !== '100') {
+                  filtros += `contrast(${$contraste.value}%) `;
+            }
+            if ($desenfoque.value !== '0') {
+                  filtros += `blur(${$desenfoque.value}px) `;
+            }
+            if ($grises.value !== '0') {
+                  filtros += `grayscale(${$grises.value}%) `;
+            }
+            if ($sepia.value !== '0') {
+                  filtros += `sepia(${$sepia.value}%) `;
+            }
+            if ($hue.value !== '0') {
+                  filtros += `hue-rotate(${$hue.value}deg) `;
+            }
+            if ($saturado.value !== '100') {
+                  filtros += `saturate(${$saturado.value}%) `;
+            }
+            if ($negative.value !== '0') {
+                  filtros += `invert(${$negative.value}) `;
+            }
+            $imgMeme.style.filter = filtros.trim();
+      }
+
+      actualizarFiltros()
+
+
+      /*-------restablecer--------*/
+
       $reestablecerV.addEventListener("click", reestablecerValores)
 
       $topText.addEventListener("input", (e) => {
