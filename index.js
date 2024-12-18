@@ -209,6 +209,7 @@ window.onload = () => {
       $topText.addEventListener("input", (e) => {
             $topTextMain.innerText = e.target.value;
       })
+      //-----SINTEXTO------//
       $sinTextoSuperior.addEventListener("change", () => {
             if ($sinTextoSuperior.checked) {
                   $topTextMain.style.color = "transparent";
@@ -229,16 +230,19 @@ window.onload = () => {
                   $textoInferiorMain.style.color = "black"
             };
       })
+      //------FUENTE----//
       $seleccionFuente.addEventListener("change", () => {
             $topTextMain.style.fontFamily = $seleccionFuente.value;
       })
       $seleccionFuente.addEventListener("change", () => {
             $textoInferiorMain.style.fontFamily = $seleccionFuente.value
       })
+      //------- TAMANO FUENTE-----//
       $tamano.addEventListener("click", () => {
             $topTextMain.style.fontSize = `${$tamano.value}px`;
             $textoInferiorMain.style.fontSize = `${$tamano.value}px`;
       })
+      //-----ALINEACION----//
       $alineacionIzq.addEventListener("click", () => {
             $topTextMain.style.justifyContent = "start";
             $textoInferiorMain.style.justifyContent = "start";
@@ -251,11 +255,13 @@ window.onload = () => {
             $topTextMain.style.justifyContent = "end";
             $textoInferiorMain.style.justifyContent = "end";
       })
+      //------COLOR FUENTE-------//
       $color.addEventListener("input", () => {
 
             $topTextMain.style.color = $color.value;
             $textoInferiorMain.style.color = $color.value;
       })
+      //------COLOR FONDO------//
       $colorFondo.addEventListener("input", () => {
             $topTextMain.style.backgroundColor = $colorFondo.value;
             $textoInferiorMain.style.backgroundColor = $colorFondo.value;
@@ -265,6 +271,7 @@ window.onload = () => {
             $topTextMain.style.backgroundColor = "transparent";
             $textoInferiorMain.style.backgroundColor = "transparent";
       })
+      //-----CONTORNO FUENTE------//
       $contornoNinguno.addEventListener("click", () => {
             $topTextMain.style.textShadow = "none";
             $textoInferiorMain.style.textShadow = "none";

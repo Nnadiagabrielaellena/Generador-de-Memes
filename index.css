@@ -2,7 +2,7 @@
       transition: all 0.3s ease;
 
 }
-
+/*-----MODO/CLARO/OSCURO--------*/
 .modoclaro {
       background-color: white;
       color: black;
@@ -14,7 +14,7 @@
       color: white;
       position: relative;
 }
-
+/*------------BODY-----------*/
 body .encabezado {
       height: 120px;
       width: 100%;
@@ -89,7 +89,7 @@ body main #img {
       height: 400px;
       width: 100%;
 }
-
+/*-------ASIDE IMAGEN-----*/
 body aside .asideImagen {
       width: 20%;
       position: absolute;
@@ -132,7 +132,7 @@ body aside .contenedor-filtros .contenedor-restablecer {
       margin-top: 30px;
 
 }
-
+/*---------ASIDE TEXTO---------*/
 body aside .asideTexto {
       width: 20%;
       position: absolute;
@@ -177,7 +177,7 @@ body .conteiner-descargar .button-descargar {
       border-radius: 10px;
 
 }
-
+/*-----------@MEDIA---------------*/
 @media (max-width: 768px) {
       body {
             position: absolute;
