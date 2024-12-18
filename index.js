@@ -1,7 +1,5 @@
 window.onload = () => {
       const $body = $("body")
-      const $aside = $("aside")
-      const $main = $("main")
       const $ClaroOscuro = $("#ClaroOscuro")
       const $imagen = $("#imagen")
       const $asideImagen = $(".asideImagen")
@@ -43,9 +41,11 @@ window.onload = () => {
       const $descargar = $("#descargar")
       const $canvasMeme = $(".canvasMeme")
 
+
       function $(selector) {
             return document.querySelector(selector);
       }
+      /*-------BOTON RESTABLECER VALORES--------*/
       function reestablecerValores() {
             $url.value = "";
             $imgMeme.value = "";
@@ -63,6 +63,7 @@ window.onload = () => {
             $negative.value = "0";
       }
       reestablecerValores()
+      //---------BOTON CKARO OSCURO----------//
 
       $ClaroOscuro.addEventListener("click", () => {
             if ($body.classList.contains("modoOscuro")) {
@@ -89,6 +90,7 @@ window.onload = () => {
                   $asideImagen.classList.remove("modoClaro")
             }
       })
+      
       $imagen.addEventListener("click", () => {
             $asideImagen.style.display = "flex";
             $asideTexto.style.display = "none"
@@ -169,40 +171,37 @@ window.onload = () => {
       })
 
       /*FUNCION ACTUALIUZAR FILTRO---------*/
-      function actualizarFiltros() {
-            let filtros = '';
-
-
-            if ($brillo.value !== '100') {
-                  filtros += `brightness(${$brillo.value}) `;
+      function actualizarFiltro() {
+            let filtro = "";
+        
+       if ($brillo.value) {
+                filtro += `brightness(${$brillo.value}) `;
             }
-            if ($contraste.value !== '100') {
-                  filtros += `contrast(${$contraste.value}%) `;
+            if ($contraste.value) {
+                filtro += `contrast(${$contraste.value}%) `;
             }
-            if ($desenfoque.value !== '0') {
-                  filtros += `blur(${$desenfoque.value}px) `;
+            if ($desenfoque.value) {
+                filtro += `blur(${$desenfoque.value}px) `;
             }
-            if ($grises.value !== '0') {
-                  filtros += `grayscale(${$grises.value}%) `;
+            if ($grises.value) {
+                filtro += `grayscale(${$grises.value}%) `;
             }
-            if ($sepia.value !== '0') {
-                  filtros += `sepia(${$sepia.value}%) `;
+            if ($sepia.value) {
+                filtro += `sepia(${$sepia.value}%) `;
             }
-            if ($hue.value !== '0') {
-                  filtros += `hue-rotate(${$hue.value}deg) `;
+            if ($hue.value) {
+                filtro += `hue-rotate(${$hue.value}deg) `;
             }
-            if ($saturado.value !== '100') {
-                  filtros += `saturate(${$saturado.value}%) `;
+            if ($saturado.value) {
+                filtro += `saturate(${$saturado.value}%) `;
             }
-            if ($negative.value !== '0') {
-                  filtros += `invert(${$negative.value}) `;
+            if ($negative.value) {
+                filtro += `invert(${$negative.value}) `;
             }
-            $imgMeme.style.filter = filtros.trim();
-      }
-
-      actualizarFiltros()
-
-
+        
+           
+            $imgMeme.style.filter = filtro.trim(); 
+        }
       /*-------restablecer--------*/
 
       $reestablecerV.addEventListener("click", reestablecerValores)
@@ -216,6 +215,7 @@ window.onload = () => {
             } else {
                   $topTextMain.style.color = "black"
             };
+
       })
       $textoInferior.addEventListener("input", (e) => {
             $textoInferiorMain.innerText = e.target.value;
@@ -238,7 +238,6 @@ window.onload = () => {
       $tamano.addEventListener("click", () => {
             $topTextMain.style.fontSize = `${$tamano.value}px`;
             $textoInferiorMain.style.fontSize = `${$tamano.value}px`;
-
       })
       $alineacionIzq.addEventListener("click", () => {
             $topTextMain.style.justifyContent = "start";
@@ -279,14 +278,19 @@ window.onload = () => {
             $topTextMain.style.textShadow = "2px 2px 5px black";
             $textoInferiorMain.style.textShadow = "2px 2px 5px black";
       })
+
+      //-----ESPACIADO---------//
       $espaciado.addEventListener("input", () => {
 
             $topTextMain.style.paddingTop = `${$espaciado.value}px`;
             $textoInferiorMain.style.paddingBottom = `${$espaciado.value}px`;
       })
+      //--------INTERLINEADO---------//
       $interlineado.addEventListener("change", () => {
-            $topTextMain.style.lineHeight = $interlineado.value
+            $topTextMain.style.lineHeight = $interlineado.value;
+            $textoInferiorMain.style.lineHeight = $interlineado.value;
       })
+      //-------BOITON DESCARGAR-------//
       $descargar.addEventListener("click", () => {
 
             domtoimage.toBlob($canvasMeme).then((blob) => {

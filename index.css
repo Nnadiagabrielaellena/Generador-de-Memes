@@ -2,6 +2,7 @@
       transition: all 0.3s ease;
 
 }
+
 .modoclaro {
       background-color: white;
       color: black;
@@ -13,6 +14,7 @@
       color: white;
       position: relative;
 }
+
 body .encabezado {
       height: 120px;
       width: 100%;
@@ -60,11 +62,13 @@ body main .canvasMeme {
       height: 600px;
       width: 90%;
       max-width: 600px;
+      overflow-x: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
 }
 
 body main .canvasMeme .titulo {
       margin: 0;
-      height: 100px;
       width: 100%;
       display: flex;
       align-items: center;
@@ -73,9 +77,6 @@ body main .canvasMeme .titulo {
       color: black;
       font-family: Anton;
       font-size: 1rem;
-      white-space: nowrap; 
-      overflow-x: auto;
-      word-wrap: break-word;
 }
 
 body main .canvasMeme #imgMeme {
@@ -88,8 +89,10 @@ body main #img {
       height: 400px;
       width: 100%;
 }
+
 body aside .asideImagen {
-      width: 20%;position: absolute;
+      width: 20%;
+      position: absolute;
       top: 0;
       right: 0;
       display: flex;
@@ -98,8 +101,9 @@ body aside .asideImagen {
       justify-content: space-between;
       display: none;
 }
+
 body aside .asideImagen .titulo-aside-imagen {
-justify-content: start;
+      justify-content: start;
       display: flex;
       height: 10px;
       margin: 1rem;
@@ -108,17 +112,19 @@ justify-content: start;
 body .asideImagen .contenedor-fondo {
       display: flex;
       flex-direction: column;
-color: black;
+      color: black;
 
 }
+
 body aside .asideImagen .contenedor-filtros {
-margin-top: 3rem;
+      margin-top: 3rem;
 }
 
 body aside .contenedor-filtros .titulos-filtro {
       display: flex;
       flex-direction: column;
 }
+
 body aside .contenedor-filtros .contenedor-restablecer {
       display: flex;
       align-items: center;
@@ -126,9 +132,10 @@ body aside .contenedor-filtros .contenedor-restablecer {
       margin-top: 30px;
 
 }
+
 body aside .asideTexto {
       width: 20%;
-position: absolute;
+      position: absolute;
       top: 0;
       right: 0;
       display: flex;
@@ -136,10 +143,10 @@ position: absolute;
       justify-content: space-between;
       height: 1000px;
       display: none;
-     
+
 }
 
-body aside  input {
+body aside input {
       margin-top: 1rem;
       margin-bottom: 1rem;
 }
@@ -148,19 +155,18 @@ body aside .asideTexto .cont-input-Color {
       display: flex;
       flex-direction: column;
       margin-top: 2rem;
-
 }
 
 body aside .asideTexto .cont-input-contorno {
       display: flex;
       margin-top: 2rem;
-
 }
+
 body .conteiner-descargar {
       height: 50px;
       display: flex;
-margin-top: 150px;
-justify-content: center;
+      margin-top: 150px;
+      justify-content: center;
       align-items: center;
 }
 
@@ -171,45 +177,41 @@ body .conteiner-descargar .button-descargar {
       border-radius: 10px;
 
 }
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
       body {
             position: absolute;
             width: 100%;
-            
       }
-      body .encabezado  {
+
+      body .encabezado {
             display: flex;
             flex-direction: column;
-           height: 200px;
-           
-
+            height: 200px;
       }
-      body .encabezado .container-buttons{
+
+      body .encabezado .container-buttons {
             display: flex;
             flex-direction: column;
             width: 300px;
       }
-      body .conteiner-descargar .button-descargar{
+
+      body .conteiner-descargar .button-descargar {
             height: 30px;
             width: 120px;
       }
-      body aside .asideImagen{
+
+      body aside .asideImagen {
             display: flex;
-            top:1000px;
+            top: 1000px;
             left: 0;
             width: 90%;
       }
-      body aside .asideTexto{
+
+      body aside .asideTexto {
             display: flex;
-            
-            top:1000px;
+            top: 1000px;
             left: 0;
             width: 90%;
       }
-      
-      
-      
 }
-      
-
-
